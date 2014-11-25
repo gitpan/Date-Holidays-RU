@@ -21,8 +21,12 @@ Date::Holidays::RU - Determine Russian Federation official holidays and business
     }
     
     my $ref = holidays( $year );
-    while ( my ( $md, $name ) = each %ref ) {
+    while ( my ( $md, $name ) = each %$ref ) {
         print "On $md there is a holiday named $name\n";
+    }
+    
+    if ( is_business_day( 2012, 03, 11 ) ) {
+        print "2012-03-11 is business day on weekend\n";
     }
 =cut
 
@@ -31,7 +35,7 @@ use strict;
 use utf8;
 use base 'Exporter';
 use vars qw/$VERSION @EXPORT_OK/;
-$VERSION = '0.01';
+$VERSION = '0.02';
 @EXPORT_OK = qw( is_holiday is_ru_holiday holidays is_business_day );
 
 use Time::Piece;

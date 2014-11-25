@@ -1,7 +1,7 @@
 ---
 abstract: unknown
 author:
-  - 'Alexander Nalobin <alexander@nalobin.ru>'
+  - unknown
 build_requires:
   ExtUtils::MakeMaker: 0
 configure_requires:
@@ -20,4 +20,4 @@ no_index:
 requires:
   Test::More: 0
   Time::Piece: 0
-version: 0.01
+version: 0.02
